@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar with Banner</title>
+  <title>Website with Navbar, Banner, and Services</title>
   <style>
     /* Reset styles */
     * {
@@ -16,7 +16,7 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Navbar styles */
+    /* Navbar */
     nav {
       display: flex;
       justify-content: space-between;
@@ -93,7 +93,7 @@
       }
     }
 
-    /* Banner/Hero Section */
+    /* Banner Section */
     .banner {
       height: 80vh;
       background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
@@ -143,7 +143,65 @@
     .banner button:hover {
       background-color: #e68a00;
     }
+
+    /* Services Section */
+    .services {
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .services p {
+      font-size: 1rem;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .service-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .service-card {
+      background-color: white;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .service-card i {
+      font-size: 3rem;
+      color: #ff9800;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      color: #666;
+      font-size: 0.95rem;
+    }
   </style>
+
+  <!-- FontAwesome CDN for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -171,5 +229,18 @@
     </div>
   </section>
 
-</body>
-</html>
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <p>We offer a range of services to help your business grow and succeed.</p>
+    
+    <div class="service-cards">
+      <div class="service-card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Web Development</h3>
+        <p>Build responsive and modern websites tailored to your business needs.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Digital Marketing</h3>
+        <p>Boost your online presence and reach your target audience effectively.</p>
