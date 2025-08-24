@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar Example</title>
+  <title>Navbar with Banner</title>
   <style>
-    /* Reset default styles */
+    /* Reset styles */
     * {
       margin: 0;
       padding: 0;
@@ -16,16 +16,18 @@
       font-family: Arial, sans-serif;
     }
 
-    /* Navbar container */
+    /* Navbar styles */
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #333;
       padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    /* Logo */
     .logo {
       color: white;
       font-size: 1.5rem;
@@ -33,7 +35,6 @@
       text-decoration: none;
     }
 
-    /* Nav links */
     .nav-links {
       list-style: none;
       display: flex;
@@ -54,7 +55,18 @@
       color: #ff9800;
     }
 
-    /* Responsive for small screens */
+    /* Hamburger menu */
+    #menu-checkbox {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
+
     @media (max-width: 768px) {
       .nav-links {
         display: none;
@@ -72,34 +84,73 @@
         text-align: center;
       }
 
-      .menu-toggle {
-        display: block;
-        cursor: pointer;
-        color: white;
-        font-size: 1.5rem;
-      }
-
       #menu-checkbox:checked ~ .nav-links {
         display: flex;
       }
+
+      .menu-toggle {
+        display: block;
+      }
     }
 
-    /* Hide checkbox */
-    #menu-checkbox {
-      display: none;
+    /* Banner/Hero Section */
+    .banner {
+      height: 80vh;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
     }
 
-    /* Menu icon hidden by default */
-    .menu-toggle {
-      display: none;
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .banner-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .banner h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .banner p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .banner button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #ff9800;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .banner button:hover {
+      background-color: #e68a00;
     }
   </style>
 </head>
 <body>
+
+  <!-- Navbar -->
   <nav>
     <a href="#" class="logo">MyLogo</a>
 
-    <!-- Menu toggle (for mobile) -->
     <label for="menu-checkbox" class="menu-toggle">&#9776;</label>
     <input type="checkbox" id="menu-checkbox">
 
@@ -110,5 +161,15 @@
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Welcome to Our Website</h1>
+      <p>We provide amazing services to boost your business</p>
+      <button>Get Started</button>
+    </div>
+  </section>
+
 </body>
 </html>
