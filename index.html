@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website with Navbar, Banner, and Services</title>
+  <title>Website with Navbar, Banner, Services, About</title>
   <style>
     /* Reset styles */
     * {
@@ -14,6 +14,7 @@
 
     body {
       font-family: Arial, sans-serif;
+      line-height: 1.6;
     }
 
     /* Navbar */
@@ -93,7 +94,7 @@
       }
     }
 
-    /* Banner Section */
+    /* Banner */
     .banner {
       height: 80vh;
       background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
@@ -144,7 +145,7 @@
       background-color: #e68a00;
     }
 
-    /* Services Section */
+    /* Services */
     .services {
       padding: 60px 20px;
       background-color: #f9f9f9;
@@ -198,9 +199,57 @@
       color: #666;
       font-size: 0.95rem;
     }
+
+    /* About Section */
+    .about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      background-color: white;
+      flex-wrap: wrap;
+    }
+
+    .about img {
+      width: 400px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .about-text {
+      max-width: 500px;
+    }
+
+    .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .about-text p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .about-text button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #ff9800;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .about-text button:hover {
+      background-color: #e68a00;
+    }
   </style>
 
-  <!-- FontAwesome CDN for icons -->
+  <!-- FontAwesome for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -229,7 +278,7 @@
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Services -->
   <section class="services">
     <h2>Our Services</h2>
     <p>We offer a range of services to help your business grow and succeed.</p>
@@ -244,3 +293,24 @@
         <i class="fas fa-bullhorn"></i>
         <h3>Digital Marketing</h3>
         <p>Boost your online presence and reach your target audience effectively.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>SEO Optimization</h3>
+        <p>Improve your search engine rankings and drive more traffic to your website.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" alt="About us">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>We are a passionate team of developers, marketers, and designers committed to helping businesses thrive in the digital world. With years of experience, we deliver high-quality solutions tailored to our clients’ goals.</p>
+      <button>Learn More</button>
+    </div>
+  </section>
+
+</body>
+</html>
